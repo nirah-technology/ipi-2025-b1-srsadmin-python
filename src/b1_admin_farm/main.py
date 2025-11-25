@@ -1,30 +1,16 @@
-class Egg:
-    def __init__(self):
-        self.height = 10
-        self.radius = 2
-        self.color = "White"
+def create_film():
+    titre = input("Entrez le titre du film : ")
+    description = input("Entrez la description du film : ")
+    note = input("Entrez la note du film : ")
+    return {"titre": titre, "description": description, "note": note}
 
-class EggsBox:
-    def __init__(self):
-        self.eggs: list[Egg] = []
-        self.max_capacity: int = 6
-    
-    def add_egg(self, egg_to_add: Egg):
-        if (len(self.eggs) < self.max_capacity):
-            if (egg_to_add not in self.eggs):
-                self.eggs.append(egg_to_add)
-    
 def main():
-    egg1 = Egg()
-    egg2 = Egg()
-    egg3 = Egg()
+    bibliotheque = []
+    film = create_film()
+    bibliotheque.append(film)
 
-    box = EggsBox()
-    box.add_egg(egg1)
-    box.add_egg(egg1)
-    box.add_egg(egg2)
-
-    
+if __name__ == "__main__":
+    main()
 
 
 
